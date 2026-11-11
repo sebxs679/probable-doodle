@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Launch | Innovación Digital en Órbita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fondo animado -->
+    <div class="stars-container" id="stars"></div>
+    <div class="rocket-bg">🚀</div>
+    <div class="rocket-bg rocket-2">🚀</div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <img src="02 Logo Horizontal.jpg" alt="Blue Launch Horizontal" class="logo-horizontal">
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="hero">
+        <img src="01 Logo Principal.jpg" alt="Blue Launch Logo Principal" class="logo-principal">
+        
+        <h1 class="slogan">INNOVACIÓN DIGITAL EN ÓRBITA</h1>
+        <p class="quote">"Impulsados por el azul profundo del espacio y el oro de la excelencia. Nuestro límite no es el cielo, es el universo infinito de la tecnología."</p>
+        
+        <!-- Cuenta Regresiva -->
+        <div class="countdown-container">
+            <h2>Lanzamiento del Proyecto Final en:</h2>
+            <div id="countdown" class="countdown">
+                <div><span id="days">00</span><div class="label">Días</div></div>
+                <div><span id="hours">00</span><div class="label">Horas</div></div>
+                <div><span id="minutes">00</span><div class="label">Minutos</div></div>
+                <div><span id="seconds">00</span><div class="label">Segundos</div></div>
+            </div>
+            <!-- Botón para iniciar el audio (los navegadores bloquean el autoplay) -->
+            <button id="start-audio-btn" class="launch-btn">Activar Secuencia de Lanzamiento</button>
+            <audio id="countdown-audio" src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg" preload="auto"></audio>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

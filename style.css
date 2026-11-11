@@ -1,0 +1,176 @@
+:root {
+    --azul-profundo: #0D183E;
+    --oro-launch: #D4AF37;
+    --blanco-espacial: #FFFFFF;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--azul-profundo);
+    color: var(--blanco-espacial);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Navegación */
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: rgba(13, 24, 62, 0.8);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid var(--oro-launch);
+}
+
+.logo-horizontal {
+    height: 60px;
+    border-radius: 8px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+    padding: 0 20px;
+}
+
+.logo-principal {
+    width: 250px;
+    border-radius: 50%;
+    margin-top: 60px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+.slogan {
+    color: var(--oro-launch);
+    letter-spacing: 3px;
+    margin-top: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.quote {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 15px auto 30px auto;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Cuenta Regresiva */
+.countdown-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--oro-launch);
+}
+
+.countdown-container h2 {
+    margin-top: 0;
+    color: var(--oro-launch);
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.countdown .label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--oro-launch);
+    font-weight: normal;
+}
+
+.launch-btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: var(--oro-launch);
+    color: var(--azul-profundo);
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.launch-btn:hover {
+    background-color: #f5d15c;
+    box-shadow: 0 0 15px var(--oro-launch);
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.rocket-bg {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.4;
+    animation: fly 15s linear infinite;
+    z-index: 1;
+}
+
+.rocket-2 {
+    font-size: 2rem;
+    animation: fly2 20s linear infinite;
+    animation-delay: 5s;
+}
+
+@keyframes fly {
+    0% { transform: translate(-100px, 100vh) rotate(45deg); }
+    100% { transform: translate(100vw, -100px) rotate(45deg); }
+}
+
+@keyframes fly2 {
+    0% { transform: translate(20vw, 100vh) rotate(30deg); }
+    100% { transform: translate(100vw, -20vh) rotate(30deg); }
+}
+
+/* Estrellas Fugaces */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--blanco-espacial);
+    border-radius: 50%;
+    animation: shootingStar 3s linear infinite;
+}
+
+.star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--blanco-espacial), transparent);
+}
+
+@keyframes shootingStar {
+    0% { transform: translateX(0) translateY(0); opacity: 1; }
+    100% { transform: translateX(1000px) translateY(1000px); opacity: 0; }
+}
